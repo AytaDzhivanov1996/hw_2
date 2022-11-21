@@ -24,7 +24,10 @@ london_co = { "r1": {"location": "21 New Globe Walk",
                                                                                     }
                     }
 
+a = list(london_co['r1'].keys())
 user_input = input("Введите имя устройства: ")
-user_input_2 = input("Введите имя параметра: ")
-if user_input in list(london_co.keys()):
-    print(london_co[user_input][user_input_2])
+user_input_2 = input(f"Введите имя параметра {a}: ")
+if user_input in list(london_co.keys()) and user_input_2 in a:
+    print(london_co[user_input][user_input_2.lower()])
+else:
+    print('Такого параметра нет')
