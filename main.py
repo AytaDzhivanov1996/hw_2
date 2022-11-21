@@ -24,7 +24,7 @@ london_co = { "r1": {"location": "21 New Globe Walk",
                                                                                     }
                     }
 
-user_input = input("Введите название устройства: ")
-
+user_input = input("Введите имя устройства: ")
+user_input_2 = input("Введите имя параметра: ")
 if user_input in list(london_co.keys()):
-    print(london_co[user_input])
+    print(london_co[user_input][user_input_2])
