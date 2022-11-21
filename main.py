@@ -26,10 +26,5 @@ london_co = { "r1": {"location": "21 New Globe Walk",
 
 user_input = input("Введите название устройства: ")
 
-if user_input == 'r1':
-    print(london_co['r1'])
-elif user_input == 'r2':
-    print(london_co['r2'])
-elif user_input == 'sw1':
-    print(london_co['sw1'])
-
+if user_input in list(london_co.keys()):
+    print(london_co[user_input])
